@@ -7,6 +7,7 @@ use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\RolesController;
+use App\Http\Controllers\Admin\BranchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,7 +58,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth:web']], function ()
     Route::post('/permission/bulk', [PermissionController::class, 'bulkPermission'])->name('bulkPermission');
     Route::post('/permission', [PermissionController::class, 'createPermission'])->name('create.permission');
     // Route::delete('/permission/{id}', [PermissionController::class, 'destroy'])->name('permission.destroy');
-
+   
+   
+    Route::resource('/branch', BranchController::class);
 
 });
 

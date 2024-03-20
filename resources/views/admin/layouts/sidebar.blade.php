@@ -43,6 +43,12 @@ Dashboard
 </a>
 </li>
 
+<li class="nav-item">
+<a href="{{route('branch.index')}}" class="nav-link">
+<i class="nav-icon fas fa-code-branch"></i> 
+<p>Branch</p>
+</a>
+</li>
 
 <li class="nav-item">
 <a href="{{route('permission.index')}}" class="nav-link">
@@ -50,6 +56,11 @@ Dashboard
 <p>Permissions</p>
 </a>
 </li>
+
+
+
+
+
 
 <!-- <ul class="nav nav-treeview">
 <li class="nav-item">
